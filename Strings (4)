@@ -1,0 +1,33 @@
+1) sWAP cASE
+
+def swap_case(s):
+    return s.swapcase()
+    
+##################################################################################################
+2) String Split and Join
+
+def split_and_join(line):
+    # write your code here
+    
+    a = line.split(" ") #line is converted to a list of strings
+    a = "-".join(a) #to join the strings into a line using "-" instead of spaces
+    return a
+    
+##################################################################################################
+3) Mutations
+
+def mutate_string(string, position, character):
+    
+    l = list(string)
+    l[position] = character
+    string = "".join(l)
+    
+    return string
+    
+##################################################################################################
+4) Text Wrap
+
+def wrap(string, max_width):
+    return textwrap.fill(string,max_width)
+   
+##################################################################################################
