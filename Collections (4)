@@ -1,0 +1,63 @@
+1) collections.Counter()
+
+from collections import Counter
+
+X = input()
+N = Counter(map(int,input().split()))
+x = input()
+shoe_size = int(x) 
+income = 0
+
+for client in range(shoe_size):
+    size,a = map(int,input().split())
+    if size in N and N[size] > 0:
+        N[size] -= 1
+        income += a
+        
+################################################################################################
+2) Collections.namedtuple()
+
+from collections import namedtuple
+
+N = int(input())
+columns = input().split()
+sum = 0
+for i in range(N):
+    students = namedtuple('student', columns)
+    col_names = input().split()
+    student = students(*col_names)
+    sum += int(student.MARKS)
+print("%.2f" % (sum/N))
+
+################################################################################################
+3) Collections.OrderedDict()
+
+from collections import OrderedDict
+N = int(input())
+ordinary_dictionary = OrderedDict()
+
+for i in range(N):
+    item_name,space,net_price = input().rpartition(' ')
+    ordinary_dictionary[item_name] = ordinary_dictionary.get(item_name, 0) + int(net_price)
+for item_name,net_price in ordinary_dictionary.items():
+    print(item_name , net_price)
+    
+################################################################################################   
+4) Collections.deque()
+
+from collections import deque
+d = deque()
+N = int(input())
+
+for i in range(N):
+    name = input().split()
+    if name[0]=="append":
+        d.append(name[1])
+    elif name[0]=="pop":
+        d.pop()
+    elif name[0]=="appendleft":
+        d.appendleft(name[1])
+    elif name[0]=="popleft":
+        d.popleft()
+        
+################################################################################################
