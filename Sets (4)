@@ -1,0 +1,41 @@
+1) Introduction to Sets
+
+def average(array):
+    # your code goes here
+    val_sum = sum(set(array))
+    val_numb = len(set(array))
+    return val_sum/val_numb
+    
+#######################################################################
+2) Set .add()
+
+N = int(input())
+countries = set()
+
+for i in range((N)):
+    countries.add(input())
+    
+print(len(countries))
+
+#######################################################################
+3) Set .union() Operation
+eng_news = int(input())
+eng = set(input().split())
+
+fren_news = int(input())
+fren = set(input().split())
+
+print(len(eng|fren))
+
+#######################################################################
+4) Set .intersection() Operation
+
+eng_news = int(input())
+eng = set(input().split())
+
+fren_news = int(input())
+fren = set(input().split())
+
+print(len(eng & fren))
+
+#######################################################################
