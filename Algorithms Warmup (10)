@@ -1,1 +1,111 @@
+1) Solve Me First
 
+def solveMeFirst(a,b):
+    return a+b
+
+num1 = int(input())
+num2 = int(input())
+res = solveMeFirst(num1,num2)
+print(res)
+
+########################################################################
+2) Simple Array Sum
+
+def simpleArraySum(ar):
+    return sum(ar)
+
+########################################################################
+3) Compare the Triplets
+
+def compareTriplets(a, b):
+    alice = 0
+    bob = 0
+
+    for i in range(len(a)):
+        if a[i] > b[i]:
+            alice += 1
+
+    for i in range(len(b)):
+        if b[i] > a[i]:
+            bob += 1
+
+    INTEGER_ARRAY = (alice, bob)
+    return INTEGER_ARRAY
+
+########################################################################
+4) A Very Big Sum
+
+def aVeryBigSum(ar):
+    return sum(ar)
+
+########################################################################
+5) Diagonal Difference
+
+def diagonalDifference(arr):
+    a = 0
+    b = 0
+    for i in range(0,len(arr)):
+        a = a + arr[i][i]
+    
+    for j in range(0,len(arr)):
+        b = b + arr[j][len(arr)-1-j]
+    
+    return abs(a - b)
+
+########################################################################
+6) Plus Minus
+
+def plusMinus(arr):
+    pos = neg = zero = 0
+    for i in range(n):
+        if arr[i]>0:
+            pos += 1
+        elif arr[i]<0:
+            neg += 1
+        else:
+            zero += 1
+    print(format((pos/n), ".6f"))
+    print(format((neg/n), ".6f"))
+    print(format((zero/n), ".6f"))
+    
+########################################################################
+7) Staircase
+
+def staircase(n):
+    for i in range(1,n+1):
+        print(" "*(n-i) + "#"*i)
+        
+########################################################################
+8) Mini-Max Sum
+
+def miniMaxSum(arr):
+    arr.sort()
+    tot_sum = sum(arr)
+    for i in range(1):
+        print(str(tot_sum - max(arr)) + " " + str(tot_sum - min(arr)))
+
+########################################################################
+9) Birthday Cake Candles
+
+def birthdayCakeCandles(candles):
+    total = 0
+    max_height = max(candles)
+    for i in range(len(candles)):
+        if(candles[i]== max_height):
+            total += 1
+    return total
+    
+########################################################################
+10) Time Conversion
+
+def timeConversion(s):
+    list = s.split(":")
+    
+    if list[2].endswith("AM"):
+        if list[0] == "12":
+            list[0] = "00"
+    else:
+        if 1 <= int(list[0]) <= 11:
+            list[0] = int(list[0]) + 12
+            
+    return "{}:{}:{}".format(list[0],list[1],list[2][0:2]) 
